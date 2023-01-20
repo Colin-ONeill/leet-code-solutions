@@ -30,3 +30,14 @@ class Solution:
 
             
         return total
+
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # returns the index of 2 numbers that combined equal the target number (index 1 and index 2 cannot be equal to eachother)
+        x = 0
+        for x1 in nums:
+            y = 0
+            for y1 in nums:
+                if x1 + y1 == target and x != y:
+                    return [x, y]
+                y += 1
+            x += 1
