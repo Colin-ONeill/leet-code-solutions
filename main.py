@@ -41,3 +41,13 @@ class Solution:
                     return [x, y]
                 y += 1
             x += 1
+    
+    def isPalindrome(self, x: int) -> bool:
+        # checks if a number is a palindrome(when reversed is the same)
+        x = str(x)
+        y = 0
+        for _ in range(len(x)):
+            if x[y] != x[-y - 1]:
+                return False
+            y += 1
+        return True
