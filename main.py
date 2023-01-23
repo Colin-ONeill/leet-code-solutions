@@ -51,3 +51,17 @@ class Solution:
                 return False
             y += 1
         return True
+    
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        ret = ""
+        y = 0
+        for c in strs[0]:
+            for word in strs:
+                try:
+                    if word[y] != strs[0][y]:
+                        return ret
+                except:
+                    return ret
+            ret += c
+            y += 1
+        return ret
